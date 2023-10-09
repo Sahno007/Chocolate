@@ -1,0 +1,205 @@
+.hero-banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+}
+
+.hero-subtitle {
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--white-color);
+  margin-bottom: 32px;
+}
+
+.hero-box {
+  display: flex;
+  justify-content: center;
+  column-gap: 14px;
+}
+
+.hero-link {
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  transition: color var(--transition-duration-and-func);
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-color);
+}
+
+.vector-box {
+  background-color: var(--white-color);
+  border-radius: 50%;
+  color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vector-box {
+  transition: color var(--transition-duration-and-func),
+    background-color var(--transition-duration-and-func);
+}
+
+.hero-link:hover > .vector-box,
+.hero-link:focus > .vector-box {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+.hero-vector {
+  fill: currentColor;
+}
+
+@media screen and (max-width: 374px) {
+  .hero-banner {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .hero-banner {
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-bottom: 71px;
+  }
+
+  .hero-banner {
+    padding-top: 395px;
+    padding-bottom: 21px;
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../img/hero_img/mobile_banner.jpg);
+    max-width: 335px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+    line-height: 1.2;
+    max-width: 285px;
+  }
+
+  .hero-box {
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 32px;
+    margin-bottom: 32px;
+  }
+  .hero-link {
+    font-size: 12px;
+    line-height: 1.17;
+    max-width: 107px;
+  }
+  .vector-box {
+    width: 28px;
+    height: 28px;
+    margin-left: 12px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero-banner {
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../img/hero_img/mobile_banner@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-banner {
+    padding-bottom: 40px;
+  }
+  .hero-subtitle {
+    font-size: 28px;
+    line-height: 1.21;
+    max-width: 484px;
+  }
+  .hero-box-position {
+    display: flex;
+    justify-content: space-between;
+  }
+  .hero-link {
+    font-size: 14px;
+    line-height: 1.29;
+    max-width: 130px;
+  }
+  .vector-box {
+    width: 38px;
+    height: 38px;
+    margin-left: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    padding-bottom: 50px;
+  }
+  .hero-banner {
+    padding-top: 671px;
+    max-width: 704px;
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../img/hero_img/tablet_banner.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
+  .hero-banner {
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../img/hero_img/tablet_banner@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-bottom: 72px;
+  }
+
+  .container.hero-banner {
+    background-color: var(--light-accent-color);
+  }
+
+  .hero-banner {
+    padding-top: 381px;
+    max-width: 1136px;
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../img/hero_img/desktop_banner.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero-banner {
+    background-image: linear-gradient(
+        rgba(17, 17, 17, 0),
+        rgba(17, 17, 17, 0.4)
+      ),
+      url(../img/hero_img/desktop_banner@2x.jpg);
+  }
+}

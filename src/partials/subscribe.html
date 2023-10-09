@@ -1,0 +1,43 @@
+<section class="subscribe-sec">
+  <div class="container">
+    <h2 class="subscribe-title">EXPLORE OUR NEW CHOCOLATE FIRST</h2>
+    <p class="subscribe-descr">
+      From the velvety texture to the rich and complex flavor, our New Chocolate
+      is a true indulgence that will leave you craving more. Made with only the
+      finest ingredients and handcrafted with the utmost care, each piece is a
+      work of art that is sure to please.
+    </p>
+    <button type="button" class="button subscribe-btn" data-modal-open="modal3">
+      Subscribe
+    </button>
+  </div>
+</section>
+<div class="backdrop is-hidden" data-modal="modal3">
+  <div class="subscribe-modal">
+    <button class="white-cls-btn" type="button" data-modal-close="modal3">
+      <svg class="subscribe-sec-cls" width="24" height="24">
+        <use href="/img/sprite.svg#icon-menu-close"></use>
+      </svg>
+    </button>
+    <div class="pseudo-container"></div>
+    <div class="mail-form-wrapper">
+      <h2 class="subscribe-modal-text">
+        Explore our <br /><span class="subscr-text-part">new chocolate</span>
+        first!
+      </h2>
+      <form class="subscribe-form">
+        <label>
+          <input
+            type="email"
+            name="email"
+            class="subscribe-form-input"
+            required=""
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            placeholder="Enter your email"
+          />
+        </label>
+        <button type="submit" class="button base-btn subscr-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

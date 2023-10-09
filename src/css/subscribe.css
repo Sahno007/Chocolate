@@ -1,0 +1,288 @@
+.subscribe-sec {
+    background-color: var(--accent-background-color);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    margin: auto;
+}
+
+.subscribe-title {
+    max-width: 291px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-descr {
+    max-width: 326px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--white-color);
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width:768px) {
+    .subscribe-sec {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+    
+    .subscribe-title {
+        max-width: 378px;
+        font-size: 24px;
+        line-height: 1.17;  
+    }
+
+    .subscribe-descr {
+        max-width: 467px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .subscribe-sec {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/subscribe-images/subscribe-mobile.jpg);
+        max-width: 375px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .subscribe-sec {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/img/subscribe-images/subscribe-mobile@2x.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe-sec {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/subscribe-images/subscribe-tablet.jpg);
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .subscribe-sec {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/subscribe-images/subscribe-tablet@2x.jpg);
+      }
+}
+
+@media screen and (min-width: 1200px) {
+    .subscribe-sec {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/subscribe-images/subscribe-desktop.jpg);
+        max-width: 1200px;
+      }  
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .subscribe-sec {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/subscribe-images/subscribe-desktop@2x.jpg);
+      }
+}
+
+/* MODAL  */
+
+.subscribe-modal {
+    width: 311px;
+    height: 350px;
+    position: absolute;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.subscribe-modal-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    max-width: 263px; 
+}
+
+.subscr-text-part {
+    color: var(--accent-color);
+}
+
+.subscribe-sec-cls {
+    stroke: var(--white-color);
+  
+    transition: stroke var(--anim-base) var(--anim-timing);
+  }
+  
+  .white-cls-btn:hover .subscribe-sec-cls,
+  .white-cls-btn:focus .subscribe-sec-cls {
+    stroke: var(--accent-color);
+}
+
+.white-cls-btn {
+    min-height: 28px;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.mail-form-wrapper {
+    padding: 32px 24px;
+}
+
+.subscr-foto {
+    border-top: 15px;
+}
+.pseudo-container {
+    width: 311px;
+    height: 169px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--accent-background-color);
+}
+
+.subscribe-form-input {
+    display: block;
+    width: 263px;
+    height: 45px;
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+    border-radius: 25px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 18px;
+    padding-right: 100px;
+}
+.subscribe-form-input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    color: rgba(64, 64, 64, 0.3);
+}
+
+.subscribe-form {
+    display: flex;
+    position: relative;
+}
+
+
+@media screen and (min-width:768px) {
+    .subscribe-modal {
+        width: 538px;
+        height: 412px;
+    }
+    .subscribe-modal-text {
+        font-size: 24px;
+        line-height: 1.17;
+        max-width: 298px;
+    }
+    .mail-form-wrapper {
+        padding: 40px;
+    }
+
+    .white-cls-btn {
+        right: 24px;
+        top: 24px;
+    }
+    .pseudo-container {
+        width: 538px;
+        height: 196px;
+    }
+    .subscribe-form-input {
+        width: 313px;
+        height: 52px;
+        padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 24px;
+    }
+    .subscr-btn {
+        height: 52px;
+    }
+
+    .subscribe-form-input::placeholder {
+        font-size: 18px;
+    }
+
+    .subscribe-form {
+        gap: 8px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .pseudo-container {
+        background-image: url(../img/subscribe-modal/subscribe-modal-mobile@2x.jpg);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .pseudo-container {
+        background-image: url(../img/subscribe-modal/subscribe-modal-mobile.jpg);
+    }
+
+    .subscr-btn {
+        display: flex;
+        font-weight: 600;
+        height: 45px;
+        padding: 14px 22px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        position: absolute;
+        right: 0;
+    }
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .pseudo-container{
+        background-image: url(../img/subscribe-modal/subscribe-modal-desktop@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .pseudo-container {
+        background-image: url(../img/subscribe-modal/subscribe-modal-desktop.jpg);
+    }
+  }

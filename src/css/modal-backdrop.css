@@ -1,0 +1,378 @@
+:root {
+  --transition-duration-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity var(--transition-duration-and-func),
+    visibility var(--transition-duration-and-func);
+}
+
+.buy_now-modal {
+  position: absolute;
+  height: 90%;
+  overflow-y: auto;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.buy_now-modal::-webkit-scrollbar {
+  width: 0;
+}
+
+.buy_now-text {
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.buy_now-text_part {
+  color: var(--accent-color);
+}
+
+.buy_now-list {
+  display: flex;
+}
+
+.buy_now-btn:checked + .buy_now-card,
+.buy_now-btn:hover + .buy_now-card {
+  border-color: var(--accent-color);
+}
+
+.buy_now-btn {
+  appearance: none;
+  display: block;
+}
+
+.buy_now-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.buy_now-weight {
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  color: var(--primary-text-color);
+}
+
+.buy_now-weight:hover,
+.buy_now-btn:checked + .buy_now-card > .buy_now-weight {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: box-shadow var(--transition-duration-and-func);
+}
+
+.buy_now-weight:active {
+  transform: scale(1.2);
+}
+
+.signup_form {
+  font-style: normal;
+  letter-spacing: -0.02em;
+}
+
+.signup_form-user_info {
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.signup_form-wrapper {
+  margin-bottom: 18px;
+}
+
+.signup_form-wrapper_name {
+  display: flex;
+}
+
+.signup_form-wrapper_phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.signup_form-wrapper_position {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.signup_form-operator_code {
+  font-weight: 500;
+  color: #000000;
+}
+
+.signup_form-wrapper_card-number {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.signup_form-card_number {
+  position: absolute;
+}
+
+.signup_form-wrapper:focus-within:not(:first-child) .signup_form-field,
+.signup_form-wrapper_name > .signup_form-field:focus,
+.signup_form-wrapper:focus-within > .signup_form-user_desc {
+  border-color: var(--accent-color);
+}
+
+.signup_form-user_desc,
+.signup_form-field {
+  width: 100%;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  background-color: transparent;
+  outline: transparent;
+  letter-spacing: -0.02em;
+  color: var(--primary-text-color);
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.signup_form-user_desc {
+  resize: none;
+}
+
+.button {
+  outline: transparent;
+}
+
+.modal-close-btn {
+  position: absolute;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: transparent;
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--light-accent-color);
+}
+
+.modal-close-btn::before,
+.modal-close-btn::after {
+  content: '';
+  background-color: var(--primary-text-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 2px;
+  transition: background-color var(--transition-duration-and-func);
+}
+
+.modal-close-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close-btn::after {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.modal-close-btn:hover::before,
+.modal-close-btn:hover::after,
+.modal-close-btn:focus::before,
+.modal-close-btn:focus::after {
+  background-color: transparent;
+  background-image: linear-gradient(to right, #f16529, #d44528);
+}
+
+@media screen and (max-width: 767px) {
+  .buy_now-modal {
+    width: 311px;
+    padding: 32px 24px;
+  }
+  .buy_now-text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .buy_now-list {
+    margin-bottom: 32px;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  .buy_now-card {
+    padding: 7px 16px;
+    justify-content: space-between;
+  }
+  .buy_now-weight {
+    padding: 6px 16px;
+  }
+  .signup_form-user_info {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .signup_form-wrapper_name {
+    flex-direction: column;
+    row-gap: 14px;
+  }
+
+  .signup_form-wrapper_phone .signup_form-field {
+    padding-left: 106px;
+  }
+  .signup_form-wrapper_position {
+    left: 18px;
+    border-right: 1.5px solid rgba(17, 17, 17, 0.05);
+    padding: 4px 8px 4px 0;
+  }
+  .signup_form-icon_flag {
+    margin-right: 8px;
+  }
+  .signup_form-operator_code {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+  .signup_form-card_number {
+    right: 14px;
+  }
+  .signup_form-field {
+    height: 45px;
+    padding-left: 18px;
+  }
+  .signup_form-user_desc,
+  .signup_form-field {
+    line-height: 1.21;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  .signup_form-user_desc {
+    height: 91px;
+    padding: 14px 18px;
+  }
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+  }
+  .modal-close-btn::before,
+  .modal-close-btn::after {
+    width: 15px;
+    height: 1.5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .buy_now-modal {
+    width: 609px;
+    padding: 48px;
+  }
+  .buy_now-text {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  .buy_now-list {
+    margin-bottom: 40px;
+    column-gap: 16px;
+    flex-basis: calc((100% - 16 * 2) / 3);
+  }
+  .buy_now-card {
+    flex-direction: column;
+    padding: 24px 20px 18px;
+    row-gap: 14px;
+  }
+  .buy_now-img {
+    height: 111px;
+  }
+  .buy_now-weight {
+    padding: 8px 29px;
+  }
+  .signup_form-user_info {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+  .signup_form-wrapper_name {
+    column-gap: 21px;
+  }
+  .signup_form-wrapper_name > .signup_form-field {
+    flex-basis: calc((100% - 21) / 2);
+  }
+  .signup_form-wrapper_phone .signup_form-field {
+    padding-left: 177px;
+  }
+  .signup_form-wrapper_position {
+    left: 24px;
+    border-right: 3px solid rgba(17, 17, 17, 0.05);
+    padding: 4px 32px 4px 0;
+  }
+  .signup_form-icon_flag {
+    margin-right: 18px;
+    width: 32px;
+    height: 100%;
+  }
+  .signup_form-operator_code {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+  .signup_form-card_number {
+    right: 24px;
+    width: 44px;
+    height: auto;
+  }
+  .signup_form-field {
+    height: 66px;
+    padding-left: 24px;
+  }
+  .signup_form-user_desc,
+  .signup_form-field {
+    font-size: 18px;
+    line-height: 1.22;
+    border-radius: 13px;
+  }
+  .signup_form-user_desc {
+    height: 137px;
+    padding: 22px 24px;
+  }
+  .modal-close-btn {
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+  }
+  .modal-close-btn::before,
+  .modal-close-btn::after {
+    width: 18px;
+    height: 2px;
+  }
+}
