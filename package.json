@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://github.com/Sahno007/SIMPLY-CHOCOLATE",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-bi23-team/",
+    "build": "vite build --base=/Chocolate/",
     "preview": "vite preview"
   },
   "devDependencies": {
